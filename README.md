@@ -33,5 +33,34 @@ The parameters are as follows:
     "client_id": String,
     "client_secret": String,
     "uri": String
+}
 ```
 **uri**: the instance url of your org. All of this info can be obtained by calling *refresh_access_token*
+
+### update_sf_record
+This lambda function is responsible for updating a single Salesforce object 
+
+The parameters are as follows:
+```
+{
+    "access_token": String 
+    "uri": String
+    "sobject_id": String
+    "sobject_name": String
+    "attributes": Json Object
+}   
+```
+
+### get_records_for_sf_object
+This lambda function retrieves all objects associated with a particular Salesforce Objects
+
+The parameters are as follows:
+```
+{
+    "access_token": String 
+    "uri": String
+    "sobject_name": String
+    "fields": (optional) List
+}   
+```
+
